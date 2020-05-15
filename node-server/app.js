@@ -14,7 +14,7 @@ mongoose.connect(
 
 mongoose.connection.on("error", (err) => {
   if (err) {
-    console.log("Error occured");
+    console.log("Error has  occured");
   }
 });
 

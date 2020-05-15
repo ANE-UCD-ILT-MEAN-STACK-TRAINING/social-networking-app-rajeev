@@ -68,10 +68,11 @@ router.get("", (req, res, next) => {
   });
 });
 
-router.post("", (req, res, next) => {
+/*router.post("", (req, res, next) => {
   const post = new Post({
     title: req.body.title,
     content: req.body.content,
+    imagePath: url + "/images/" + req.file.filename,
   });
 
   post.save();
@@ -80,7 +81,7 @@ router.post("", (req, res, next) => {
   res.status(201).json({
     message: "Post added successfully...!!!",
   });
-});
+});*/
 
 router.delete("/:id", (req, res, next) => {
   Post.deleteOne({ _id: req.params.id }).then((result) => {
